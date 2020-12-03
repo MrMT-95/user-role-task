@@ -1,0 +1,24 @@
+###
+POST http://localhost:8080/roles?name=user
+###
+POST http://localhost:8080/users
+Content-Type:application/json
+Cache-Control: no-cache
+
+{
+  "name": "Alex",
+  "role": "user"
+}
+###
+POST http://localhost:8080/users
+Content-Type:application/json
+Cache-Control: no-cache
+
+{
+  "name": "Matt1",
+  "role": "admin"
+}
+###
+GET http://localhost:8080/users
+###
+GET http://localhost:8080/roles

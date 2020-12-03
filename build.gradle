@@ -1,0 +1,29 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.0'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '15'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compile 'org.springframework.boot:spring-boot-starter-actuator:2.4.0'
+    compile 'org.springframework.boot:spring-boot-devtools:2.4.0'
+    compile "org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE"
+    compile "org.springframework.boot:spring-boot-starter-thymeleaf:2.2.2.RELEASE"
+}
+
+test {
+    useJUnitPlatform()
+}
